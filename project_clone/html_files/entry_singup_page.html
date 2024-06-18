@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Signup Page</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css_floder/1st_sign_up.css' %}">
+    <!--Stylesheet-->
+
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form action="{% url 'vishnu' %}" method="post">
+       
+        {% csrf_token %} 
+        <h3>Signup Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="username" value=" {{ mymembers1 }}"> <h4 style="color:brown"> {{ mymembers1 }} </h4> 
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email or Phone" name="email" id="email"><h4 style="color:brown"> {{ mymembers2 }} </h4> 
+
+        <label for="password1">Password</label>
+        <input type="password" placeholder="Password" id="password1" name="password1"><h4 style="color:brown"> {{ mymembers4 }} </h4> 
+
+
+        <label for="password2">Confrom Password</label>
+        <input type="password" placeholder="Confrom Password" id="password2" name="password2"><h4 style="color:brown"> {{ mymembers4 }} </h4> 
+
+
+        
+        <button type="submit">Signup</button>
+        <h4 style="color:brown"> {{ mymembers5 }} </h4> 
+      
+    </form>
+</body>
+</html>
